@@ -1,4 +1,4 @@
-function declareGlobals() {
+﻿function declareGlobals() {
     var directionsSearchModeOrigin = "text";
     var directionsSearchModeDestination = "text";
     var routes;
@@ -93,12 +93,12 @@ function listSteps(routeIndex) {
     jQuery("#steps").css("display", "");
 }
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 
     var shops = new Array();
 
-    var latitude = -1.291112;
-    var longitude = 36.810957;
+    var latitude = -4.266667;
+    var longitude = 15.283333;
     var map;
     var markers = new Array();
     var infowindows = new Array();
@@ -122,9 +122,8 @@ jQuery(document).ready(function() {
             mapOptions);
 
 
-    if (navigator.geolocation)
-    {
-//        //console.log("geolocation is supported");
+    if (navigator.geolocation) {
+        //        //console.log("geolocation is supported");
 
         var options = {
             enableHighAccuracy: true,
@@ -133,7 +132,7 @@ jQuery(document).ready(function() {
         };
 
         navigator.geolocation.getCurrentPosition(
-                function(pos) {
+                function (pos) {
                     currentPosResponseGiven = true;
 
                     ////console.log("current location " + pos.coords.latitude + "," + pos.coords.longitude);
@@ -144,44 +143,44 @@ jQuery(document).ready(function() {
 
                     geocoder = new google.maps.Geocoder();
 
-                    geocoder.geocode({latLng: currentPosLatLng}, function(results, status) {
+                    geocoder.geocode({ latLng: currentPosLatLng }, function (results, status) {
                         if (status === google.maps.GeocoderStatus.OK) {
                             if (results) {
-//                                infowindow.setContent(results[1].formatted_address);
-//                                //console.log("results ");
-//                                //console.log(results);
+                                //                                infowindow.setContent(results[1].formatted_address);
+                                //                                //console.log("results ");
+                                //                                //console.log(results);
                                 for (k = 0; k <= results.length - 1; k++) {
-//                                    //console.log("address components for results " + k);
-//                                    //console.log(results[k].address_components !== undefined);
-//                                    if (results[k].address_components !== undefined) {
-//                                        for (i = 0; i <= results[k].address_components.length - 1; i++) {
-//                                            //console.log("types for results " + k + ", address components " + i);
-//                                            //console.log(results[k].address_components[i].types !== undefined);
-//                                            if (results[k].address_components[i].types !== undefined) {
-//                                                for (j = 0; j <= results[k].address_components[i].types.length - 1; j++) {
-//                                                    if (results[k].address_components[i].types[j] === "country") {
-//                                                        //console.log("is country");
-//                                                        //console.log("long name for results " + k + ", address components " + i + ", types " + j);
-//                                                        //console.log(results[k].address_components[i].types[j].long_name !== undefined)
-//                                                        if (results[k].address_components[i].types[j].long_name !== undefined) {
-                                                            if (results[k].formatted_address === "Nigeria") {
-//                                                                //console.log("is nigeria");
-                                                                isNigeria = true;
-                                                                if (closestShopsShown === false) {
-                                                                    closestShopsShown = true;
-                                                                    clearShops();
-                                                                    closestShops(new google.maps.LatLng(currentPositionLat, currentPositionLng));
-                                                                    map.setCenter(new google.maps.LatLng(currentPositionLat, currentPositionLng));
-                                                                    map.setZoom(12);
-                                                                    showShops();
-                                                                }
-                                                            }
-//                                                        } //
-//                                                    }
-//                                                }
-//                                            }
-//                                        }
-//                                    }
+                                    //                                    //console.log("address components for results " + k);
+                                    //                                    //console.log(results[k].address_components !== undefined);
+                                    //                                    if (results[k].address_components !== undefined) {
+                                    //                                        for (i = 0; i <= results[k].address_components.length - 1; i++) {
+                                    //                                            //console.log("types for results " + k + ", address components " + i);
+                                    //                                            //console.log(results[k].address_components[i].types !== undefined);
+                                    //                                            if (results[k].address_components[i].types !== undefined) {
+                                    //                                                for (j = 0; j <= results[k].address_components[i].types.length - 1; j++) {
+                                    //                                                    if (results[k].address_components[i].types[j] === "country") {
+                                    //                                                        //console.log("is country");
+                                    //                                                        //console.log("long name for results " + k + ", address components " + i + ", types " + j);
+                                    //                                                        //console.log(results[k].address_components[i].types[j].long_name !== undefined)
+                                    //                                                        if (results[k].address_components[i].types[j].long_name !== undefined) {
+                                    if (results[k].formatted_address === "Nigeria") {
+                                        //                                                                //console.log("is nigeria");
+                                        isNigeria = true;
+                                        if (closestShopsShown === false) {
+                                            closestShopsShown = true;
+                                            clearShops();
+                                            closestShops(new google.maps.LatLng(currentPositionLat, currentPositionLng));
+                                            map.setCenter(new google.maps.LatLng(currentPositionLat, currentPositionLng));
+                                            map.setZoom(12);
+                                            showShops();
+                                        }
+                                    }
+                                    //                                                        } //
+                                    //                                                    }
+                                    //                                                }
+                                    //                                            }
+                                    //                                        }
+                                    //                                    }
                                 }
 
                             }
@@ -197,9 +196,9 @@ jQuery(document).ready(function() {
 
                     });
                 },
-                function() {
+                function () {
                     currentPosResponseGiven = true;
-//                    //console.log("getposition error");
+                    //                    //console.log("getposition error");
                     clearShops();
                     loadShops();
                     showShops();
@@ -244,34 +243,16 @@ jQuery(document).ready(function() {
     }
 
     function loadShops() {
-
-        shops =  [
-{title:"UAP HOLDINGS LIMITED Head office" , description:"Bishops Garden Towers, Bishops Road, P.O. Box 43013 - 00100, Nairobi, Kenyauapholdings@uap-group.com", lat:"-1.291112" , lng:"36.810957" , index:4, openingtime: "Mobile: + 254 711 065000", closingtime: "Tel: + 254 020 2850000"},
-{title:"UAP Insurance Company Limited Head Office" , description:"Bishops Garden Towers, Bishops Road, P.O. Box 43013 - 00100, Nairobi, Kenyauapinsurance@uap-group.com", lat:"-1.291112" , lng:"36.810957" , index:4, openingtime: "Mobile: + 254 711 065 000", closingtime: "Tel: + 254 (020) 2850 000"},
-{title:"UAP Life Assurance Limited Head office" , description:"Bishops Garden Towers, Bishops Road, P.O. Box 23842 – 00100, Nairobi, KENYAlife@uap-group.com", lat:"-1.291112" , lng:"36.810957" , index:4, openingtime: "Mobile: +254 711 065 300", closingtime: "Tel: +254 20 2850 300"},
-{title:"UAP Properties Kenya Limited Head office" , description:"Bishops Garden Towers, Bishops Road, P.O. Box 43013 - 00100, Nairobi, Kenyauapproperties@uap-group.com", lat:"-1.291112" , lng:"36.810957" , index:4, openingtime: "Mobile: + 254 711 065 000", closingtime: "Tel: + 254 20 2850 000"},
-{title:"UAP Investments Limited Head Office" , description:"3rd Floor I&M Building, 2nd Ngong Avenue, P. O. BOX 43013 – 00100, Nairobi, KenyaUAPInvestments@uap-group.com ", lat:"-1.293953" , lng:"36.811113" , index:4, openingtime: "Mobile +254 020 2850000 ", closingtime: "Tel: +254 711 065000"},
-{title:"Customer Care Centre" , description:"Queensway Hse 3rd Floor Kaunda StreetP. O. Box 43013 - 00100 Nairobi, Kenyauapinsurance@uap-group.com", lat:"-1.285239" , lng:"36.823405" , index:4, openingtime: "Tel: +254 20 2228070", closingtime: "Tel: +254 20 2229521"},
-{title:"NAIROBI NAKUMATT PRESTIGE- Satellite" , description:"Nakumatt Prestige, Ngong Road, P.O. Box 43013 - 00100 Nairobi, Kenya", lat:"-1.300039" , lng:"36.787359" , index:4, openingtime: "Mobile: + 254 711 065000", closingtime: "Tel: + 254 020 2850000"},
-{title:"Nairobi Town Centre Branch - Life" , description:"Zuhura Place 2nd foor, Opp Tuskys, Kenyatta Avenuelife@uaplife.com", lat:"-1.291112" , lng:"36.810957" , index:4, openingtime: "Tel: +254 67 20242", closingtime: "Tel: +254 67 242680"},
-{title:"ELDORET Branch" , description:"Kiptagich House, Uganda RoadP. O. Box 707 - 30100 Eldoret, Kenyaeldoret@uap-group.com", lat:"0.520502" , lng:"35.268094" , index:4, openingtime: "Tel: +245 53 2061437", closingtime: "Tel: +245 53 2061438"},
-{title:"NYERI Branch" , description:"Sohan Plaza, P. O. Box 1231 - 10100 Nyeri, Kenyanyeri@uap-group.com", lat:"-0.421746" , lng:"36.950312" , index:4, openingtime: "Tel: +254 61 2030660", closingtime: "Tel: +254 61 2034722"},
-{title:"NAKURU Branch Insurance" , description:"Prestige Mall, P. O. Box 14116 - 20100 Nakuru, Kenyanakuru@uap-group.com", lat:"-0.285392" , lng:"36.064844" , index:4, openingtime: "Tel: +254 51 2212910", closingtime: "Tel: +254 51 2212910"},
-{title:"Nakuru Branch - Life" , description:"Giddo Plaza, Ground Floor, George Morara Road, P.O. Box 14116 - 20100, Nakuru, Kenyalife@uaplife.com", lat:"-0.287209" , lng:"36.059524" , index:4, openingtime: "Tel: +254 20 2850300", closingtime: "Tel: +254 20 2850300"},
-{title:"MOMBASA Branch" , description:"Tea House, Ground Floor, Behind Sairose Chinese Restaurant , off Nyerere Road,P. O. Box 81612 - 80100 Mombasa, Kenyamombasa@uap-group.com", lat:"-4.066132" , lng:"39.669619" , index:4, openingtime: "Tel: +254 041 2223777", closingtime: "Tel: +254 041 2223778"},
-{title:"THIKA Branch" , description:"Twin Oak Plaza - 1st Floor, Kwame Nkrumah RoadP. O. Box 4280 - 01000, Thika, Kenyathika@uap-group.com", lat:"-1.036508" , lng:"37.074736" , index:4, openingtime: "Tel: +254 20 2486803/4", closingtime: "Tel: +254 20 2486805"},
-{title:"KISUMU Branch" , description:"Tivoli Centre, Ground Floor Court RoadP.O.Box 3379 - 40100 Kisumu, Kenyakisumu@uap-group.com", lat:"-0.104929" , lng:"34.754403" , index:4, openingtime: "Tel: +254 57 2020119", closingtime: "Tel: +254 57 2020119"},
-{title:"MACHAKOS Branch" , description:"KCB Building, MachakosP. O. Box 1092 - 90100 Machakos, Kenyamachakos@uap-group.com", lat:"-1.517906" , lng:"37.269223" , index:4, openingtime: "Tel: +254 20 2054611", closingtime: "Tel: +254 20 2054611"},
-{title:"Nairobi Westlands-Life" , description:"Woodvale Place, 2nd Floor Woodvale Groove, Streetlife@uaplife.com", lat:"-1.262952" , lng:"36.801482" , index:4, openingtime: "Tel: +254 20 4456219", closingtime: "Tel: +254 20 4456220"},
-{title:"MERU Branch" , description:"Mwalimu Plaza, Ground FloorP. O. Box 3258 - 60200 Meru, Kenya", lat:"0.0508" , lng:"37.649591" , index:4, openingtime: "Tel: +254 064 30089", closingtime: "Tel:  +254 20 2423190"}
-];
+        shops = [
+{ title: "UAP RDC, sprl - courtier", description: "assurances/insurance brokers      Bureau nÂ° 3-0-B12, Kavali Center, nÂ° 10/13       Croisement Av. Mutombo Katshi et    Equateur Kinshasa/ Gombe, RDC, uapdrc@uap-group.com", lat: "-4.336480", lng: "15.268188", index: 4, openingtime: "Mobile: + 254 711 065000", closingtime: "Tel +243 975 33 88 33" }
+        ];
     }
 
     function searchShops() {
         //console.log("searching shops...");
         var address = jQuery("input[name='location']").val();
         geocoder = new google.maps.Geocoder();
-        geocoder.geocode({'address': address, componentRestrictions: {country: "ke"}}, function(results, status) {
+        geocoder.geocode({ 'address': address, componentRestrictions: { country: "ke" } }, function (results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
                 //console.log(results[0].geometry.location);
                 map.setCenter(results[0].geometry.location);
@@ -390,11 +371,11 @@ jQuery(document).ready(function() {
         infoWindowHtml = '<div id="mapMarker">';
         infoWindowHtml += '<h6>' + clickedShop.title + '</h6>';
         infoWindowHtml += '<p>' + clickedShop.description + '</p>';
-        
+
         infoWindowHtml += '<div id="openingContainer">';
         infoWindowHtml += '<div id="' + isOpenClass + '">' + shopIsOpenText + '</div>';
-        infoWindowHtml += '<div id="openTime">' + clickedShop.openingtime + ' </div> ' ;
-        infoWindowHtml += '<div id="closeTime">' + clickedShop.closingtime + ' </div> ' ;
+        infoWindowHtml += '<div id="openTime">' + clickedShop.openingtime + ' </div> ';
+        infoWindowHtml += '<div id="closeTime">' + clickedShop.closingtime + ' </div> ';
         infoWindowHtml += '</div>';
         infoWindowHtml += '<div id="markerlinks"><ul><li>';
         infoWindowHtml += '<a href="#" onclick="top.clickInfoWindowDirections(' + clickedShop.lat + ',' + clickedShop.lng + ');">Directions</a></li>';
@@ -427,7 +408,7 @@ jQuery(document).ready(function() {
                 icon: "images/pin.png"
             });
             ////console.log("marker "+i+" "+marker);
-            google.maps.event.addListener(marker, 'click', function() {
+            google.maps.event.addListener(marker, 'click', function () {
 
                 var markerlatlng = marker.getPosition();
                 ////console.log("marker clicked at " + markerlatlng.lat() + "," + markerlatlng.lng());
@@ -463,20 +444,20 @@ jQuery(document).ready(function() {
             }
 
 
-//                                <div id="singleStorecontainer">
-//                                    <h6>Shop</h6>
-//                                    <p>Silverbird Galleria, 133, Ahmadu Bello Way, Victoria Island, Lagos, Nigeria</p>
-//                                    <div id="openingContainer">
-//                                        <div id="openWord">OPEN</div>
-//                                        <div id="openTime">8:00 AM to 9:00 PM</div>
-//                                    </div>
-//                                </div>
-//                            </li>
+            //                                <div id="singleStorecontainer">
+            //                                    <h6>Shop</h6>
+            //                                    <p>Silverbird Galleria, 133, Ahmadu Bello Way, Victoria Island, Lagos, Nigeria</p>
+            //                                    <div id="openingContainer">
+            //                                        <div id="openWord">OPEN</div>
+            //                                        <div id="openTime">8:00 AM to 9:00 PM</div>
+            //                                    </div>
+            //                                </div>
+            //                            </li>
 
-             oddListing = "";
+            oddListing = "";
             if ((i % 2) === 0)
                 oddListing = 'class="oddListing"';
-             sidelinks = '<li ' + oddListing + '>';
+            sidelinks = '<li ' + oddListing + '>';
             sidelinks += '<div data-zindex="' + i + '" class="singleStorecontainer">';
             //sidelinks += '<a data-zindex="' + i + '" href="#">';
             sidelinks += '<h6>' + shop.title + '</h6>';
@@ -488,7 +469,7 @@ jQuery(document).ready(function() {
             jQuery("#locationsListings ul").append(sidelinks);
         }
 
-        jQuery(".singleStorecontainer").click(function() {
+        jQuery(".singleStorecontainer").click(function () {
             ////console.log("shop list item clicked");
             var zIndex = jQuery(this).data("zindex");
             ////console.log("it's zindex is " + zIndex);
@@ -500,7 +481,7 @@ jQuery(document).ready(function() {
                 ////console.log("the infowindow is closed");
             }
 
-infowindow = new google.maps.InfoWindow({
+            infowindow = new google.maps.InfoWindow({
                 content: createInfoWindow(zIndex) //"<div>" + shops[zIndex][1] + "</div>"
             });
             ////console.log("marker is " + markers[zIndex]);
@@ -520,7 +501,7 @@ infowindow = new google.maps.InfoWindow({
         return false;
     }
 
-    $(".storesearch").submit(function(e) {
+    $(".storesearch").submit(function (e) {
 
         e.preventDefault();
         ////console.log("location " + jQuery("#location").val());
@@ -539,19 +520,19 @@ infowindow = new google.maps.InfoWindow({
     jQuery("div#infowindow").css("display", "none");
     jQuery("div#routes").css("display", "none");
     jQuery("div#steps").css("display", "none");
-//                        jQuery("a.directions").click(function() {
-//                            //console.log("directions clicked...");
-//                            jQuery("div#stores").css("display", "none");
-//                            jQuery("div#directions").css("display", "");
-//                            return false;
-//                        });
+    //                        jQuery("a.directions").click(function() {
+    //                            //console.log("directions clicked...");
+    //                            jQuery("div#stores").css("display", "none");
+    //                            jQuery("div#directions").css("display", "");
+    //                            return false;
+    //                        });
 
-    jQuery("#a").change(function() {
+    jQuery("#a").change(function () {
         directionsSearchModeOrigin = "text";
         //console.log("origin search values changed");
     });
 
-    jQuery("#b").change(function() {
+    jQuery("#b").change(function () {
         directionsSearchModeDestination = "text";
         //console.log("destination search values changed");
     });
@@ -578,9 +559,9 @@ infowindow = new google.maps.InfoWindow({
         return sentence;
     }
 
-    jQuery("#resetsearch").click(function() {
+    jQuery("#resetsearch").click(function () {
         clearShops();
-         if (isNigeria === true) {
+        if (isNigeria === true) {
             closestShops(new google.maps.LatLng(currentPositionLat, currentPositionLng));
             map.setCenter(new google.maps.LatLng(currentPositionLat, currentPositionLng));
             map.setZoom(12);
@@ -598,7 +579,7 @@ infowindow = new google.maps.InfoWindow({
     });
 
     //jQuery("#directions form").submit(function() {
-    jQuery("#directionget").click(function() {
+    jQuery("#directionget").click(function () {
         //console.log("get directions form submitted");
         var directionsDisplay = new google.maps.DirectionsRenderer();
         var directionsService = new google.maps.DirectionsService();
@@ -628,13 +609,13 @@ infowindow = new google.maps.InfoWindow({
         //console.log("the request origin " + request.origin);
         //console.log("the request destination " + request.destination);
         //console.log("the request travel mode " + request.travelMode);
-        directionsService.route(request, function(result, status) {
+        directionsService.route(request, function (result, status) {
             if (status === google.maps.DirectionsStatus.OK) {
 
                 //console.log("response status " + status);
                 //console.log("response result " + result);
                 directionsDisplay.setDirections(result);
-//              directionsDisplay.setPanel(document.getElementById("routes"));
+                //              directionsDisplay.setPanel(document.getElementById("routes"));
 
                 //console.log("How many routes? " + result.routes.length);
 
@@ -689,13 +670,13 @@ infowindow = new google.maps.InfoWindow({
         return false;
     });
 
-    jQuery(".singleRoute").click(function() {
+    jQuery(".singleRoute").click(function () {
         //console.log("singleroute clicked " + jQuery(this).data("routeIndex"));
         listSteps(jQuery(this).data("routeIndex"));
         return false;
     });
 
-    jQuery('.mode').click(function() {
+    jQuery('.mode').click(function () {
 
         //jQuery('.categorymode').hide();
         //jQuery('#' + jQuery(this).attr('name')).show();

@@ -26,7 +26,7 @@ a{ text-decoration:none;}
 #submitContainer{ width:auto; height:auto; float:right;}
 #inputTitle{ display:block; width:100%; color:#666666; padding:5px 0;}
 #inputField{ display:block; width:98%;}
-#inputField input[type=text]{ width: 117%; font-size:13px; color:#666666; padding:10px 2%; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; /* position:relative; behavior:url(css/PIE.htc); */ border:none; outline:none; }
+#inputField input[type=text]{ width:100%; font-size:13px; color:#666666; padding:10px 2%; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; /* position:relative; behavior:url(css/PIE.htc); */ border:none; outline:none; }
 #submitContainer input[type=submit]{ background: #c5093b; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:20px 35px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
 #submitContainer input[type=button]:hover{ text-align:underline; }
 .resete{ background: #c5093b; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:20px 35px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
