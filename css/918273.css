@@ -1,0 +1,182 @@
+/*     CSS Reset    */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/*    HTML5 display-role reset for older browsers    */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a{ text-decoration:none;}
+.nodisplay{ display:none;}
+
+@font-face { font-family: 'ronnia_ebextrabold'; src: url('ronniaextrabold-webfont.eot'); src: url('ronniaextrabold-webfont.eot?#iefix') format('embedded-opentype'), url('ronniaextrabold-webfont.woff') format('woff'), url('ronniaextrabold-webfont.ttf') format('truetype'), url('ronniaextrabold-webfont.svg#ronnia_ebextrabold') format('svg'); font-weight: normal; font-style: normal; }
+
+/*--STORE LOCATOR CONTAINER START--*/
+#storelocatorcontainer{ /* width:960px; */ height:auto; background:#fff; margin:0 auto; font-size:13px; font-family:Arial, Helvetica, sans-serif; padding-left: 10px; padding-right: 10px; padding-top: 10px;}
+#storelocatorcontainer h1{ font-size:24px; color:#333333; font-family:Arial, Helvetica, sans-serif; font-weight:bold; margin:0 0 10px 0; padding:0;}
+#storelocatorcontainer h6{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color: #c5093b; font-weight:bold; margin:0; padding:0;}
+
+/*--STORE LOCATOR CONTAINER HEADER--*/
+#storelocatorheader{ /* width:96%; */ height:auto; padding:20px 2%; background:url(../images/header_bg.jpg) repeat-x #b7b7b7; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; display:block; border:1px solid #b7b7b7;}
+#locationContainer{ width: 60%; height:auto; float:left; margin:0 2% 0 0;}
+#storesContainer{ width:30%; height:auto; float:left; }
+#selectionBoxcontainer select{ width:295px; height:auto; background:none; border:none; outline:none; padding:8px 0 8px 5px; border:none; opacity:0;  /* IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";/* IE 5-7 */filter: alpha(opacity=50);/* Netscape */-moz-opacity: 0.5;/* Safari 1.x */-khtml-opacity: 0.5;/* Good browsers */opacity: 0.5; }
+#selectionBoxcontainer{ width:270px; height:auto; background:url(../images/select_arrow.jpg) right center no-repeat #fff;  overflow:hidden; border:none; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); }
+#submitContainer{ width:auto; height:auto; float:right;}
+#inputTitle{ display:block; width:100%; color:#666666; padding:5px 0;}
+#inputField{ display:block; width:98%;}
+#inputField input[type=text]{ width:100%; font-size:13px; color:#666666; padding:10px 2%; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; /* position:relative; behavior:url(css/PIE.htc); */ border:none; outline:none; }
+#submitContainer input[type=submit]{ background: #c5093b; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:20px 35px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
+#submitContainer input[type=button]:hover{ text-align:underline; }
+.resete{ background: #c5093b; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:20px 35px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
+
+
+/*--STORE LOCATOR CONTAINER CONTENT--*/
+#storelocatorcontentwrapper{ width:100%; height:auto; display:block; overflow:hidden; padding:20px 0;}
+#storelocatorcontentleft{ width: 910px; height:530px; float:left; overflow:hidden; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); color:#333; overflow:hidden; padding-left: 13px;}        
+#storelocatorcontentright{ width:280px; height:485px; background:#fff; padding:20px; float:right; border:1px solid #e5e5e5; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); color:#333; overflow:hidden;}
+#locationsListings{ width:100%; height:auto; overflow:hidden;}
+#locationsListings ul{ margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+#locationsListings ul li{ margin:0; padding:10px 2% 15px 2%; display:block; border-bottom:1px solid #dbdbdb; overflow:hidden; width:96%;}
+/*#locationsListings ul:nth-child(odd){background:#f5f5f5;}*/
+.oddListing{ background:#f5f5f5; }
+#locationsListings ul li p{ color:#666666;}
+.singleStorecontainer{ display:block; width:100%; padding:0; margin:0; }
+#openingContainer{ display:block; width:100%; padding:15px 0 0 0;}
+#openWord{ background:#de0000; color:#fff; text-transform:uppercase; font-size:13px; text-align:center; padding:2px 3px; float:left; width:auto; margin:0 5px 0 0; font-weight:bold; text-transform:uppercase;}
+#openTime{ font-size:13px; display: block; padding:2px 0 0 0;}
+#closeTime{ font-size:13px; display: block; padding:2px 0 0 0;}
+#closeWord{ background:#063; color:#fff; text-transform:uppercase; font-size:13px; text-align:center; padding:2px 3px; float:left; width:auto; margin:0 5px 0 0; font-weight:bold; text-transform:uppercase; display: none;}
+
+#transportmode{ width:100%; height:auto; overflow:hidden; }
+#transportmode ul{ width:100%; height:auto; display:inline; }
+#transportmode ul li{ display:block; margin:0 10px 0 0; }
+
+#carmode{ width:40px; height:28px; background:url(../images/car_dormant.jpg) no-repeat; float:left; cursor:pointer;}
+#carmode:hover , #carmode.active{ background:url(../images/car_active.jpg) no-repeat;}
+
+#busmode{ width:40px; height:28px; background:url(../images/bus_dormant.jpg) no-repeat; float:left; cursor:pointer;}
+#busmode:hover , #busmode.active{ background:url(../images/bus_active.jpg) no-repeat;}
+
+#walkingmode{ width:40px; height:28px; background:url(../images/person_dormant.jpg) no-repeat; float:left; cursor:pointer;}
+#walkingmode:hover , #walkingmode.active{ background:url(../images/person_active.jpg) no-repeat;}
+
+#cyclingmode{ width:40px; height:28px; background:url(../images/cyclist_dormant.jpg) no-repeat; float:left; cursor:pointer;}
+#cyclingmode:hover , #cyclingmode.active { background:url(../images/cyclist_active.jpg) no-repeat;}
+
+.closetransport{ width:16px; height:18px; background:url(../images/close_dormant.jpg) no-repeat; float:right; cursor:pointer; position:absolute; right:20px; top:10px; z-index:9999;}
+.closetransport:hover{ background:url(../images/close_active.jpg) no-repeat;}
+
+#modecontentwrapper{ width:100%; height:auto; overflow:hidden; border-bottom:1px solid #dbdbdb; }
+
+.categorymode{ width:100%; height:auto; background:none; display:none; overflow:hidden; }
+.categorymode.active{ display:block; }
+
+#carmodeform{ width:100%; margin:10px auto; height:auto; overflow:hidden;}
+#busmodeform{  width:100%; margin:10px auto; height:auto; overflow:hidden; }
+#walkingmodeform{  width:100%; margin:10px auto; height:auto; overflow:hidden; }
+#cyclingmodeform{  width:100%; margin:10px auto; height:auto; overflow:hidden;}
+
+#inputDestination{ width:100%; height:auto; display:block; overflow:hidden; margin:0 0 10px 0;}
+#alphabet{ background:#000; padding:8px 10px; font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:bold; color:#fff; width:auto; float:left; margin:0;}
+#inputFieldtwo{ float:left; margin:0; width:230px;}
+#inputFieldtwo input[type=text]{ width:96%; background:#edeeee; font-size:13px; color:#666666; padding:10px 2%;  border:none; outline:none; margin:0; }
+#buttonGetdirection{ width:100%; display:block; overflow:hidden; }
+#buttonGetdirection input[type=button]{ background:#de0000; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:8px 10px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
+#buttonGetdirection input[type=button]:hover{ color:#d0d0d0;}
+
+#getDirectionsdiv{ width:100%; height:auto; display:block;}
+#suggestedRoutes{ width:100%; display:block; height:auto; overflow:hidden; }
+#suggestedrouteTop{ width:100%; display:block; height:auto; overflow:hidden; padding:10px 0;}
+#routeMorearrowHide{ width:11px; height:9px; float:left; background:url(../images/routemorearrow.jpg) no-repeat center; margin:2px 0 0 0; cursor:pointer; display:block; }
+#routeMorearrowShow{ width:11px; height:9px; float:left; background:url(../images/routelessarrow.jpg) no-repeat center; margin:2px 0 0 0; cursor:pointer; display:none;}
+#routeToptitle{ float:left; color:#8a8ca5; font-size:12px; font-weight:bold; }
+#suggestedrouteBottom{ width:100%; display:block; height:auto; overflow:hidden; }
+.singleRoute{ width:92%; height:auto; display:block; float:right; padding:10px 2%; }
+.oddRoute{ font-weight:bold; color:#000; background:#ebf2fd; }
+.evenRoute{ font-weight:normal; color:#535d6c; }
+#singleway{ width:115px; height:auto; float:left; }
+#singledistance{ width:130px; height:auto; float:right; }
+#suggestedDirections{ width:100%; height:auto; display:block; overflow:hidden;}
+#directionsTitle{ width:95%; height:auto; color:#000; display:block; font-weight:bold; font-size:15px; padding:10px 0; }
+#pointA{ width:100%; height:auto; padding:5px 0 5px 30px; background:url(../images/marker_greenA.png) no-repeat left center; display:block; color:#000; }
+#pointB{ width:100%; height:auto; padding:5px 0 5px 30px; background:url(../images/marker_greenB.png) no-repeat left center; display:block; color:#000; }
+#towncityname{ font-weight:bold;}
+#countryname{ font-weight:normal;}
+#singleDirection{ width:88%; height:auto; display:block; padding:0 2% 10px 10%; margin:5px 0; }
+.oddDirection{ font-weight:normal; color:#535d6c; }
+.evenDirection{ font-weight:bold; color:#000; background:#ebf2fd; }
+.turnLeft{ background:url(../images/turn_left.png) no-repeat top left; }
+.turnRight{ background:url(../images/turn_right.png) no-repeat top left; }
+#singleDirectiontop{ color:#000; display:block;}
+#stepNumber{  font-weight:bold;  }
+#streetName{ font-weight:bold; }
+#singleDirectionstreet{ font-size:11px;}
+#singleDirectiondistance{ text-align:right; background:url(../images/singleDistance_bg.jpg) repeat-x center;  }
+#distanceApproximate{ background:#fff; width:auto; font-size:11px; padding:0 2px;}
+
+
+@media only screen and (min-width : 720px) and (max-width : 960px) { 
+
+    #storelocatorcontainer{ width:98%; height:auto; background:#fff; margin:0 auto; font-size:13px; font-family:Arial, Helvetica, sans-serif; }
+
+    #storelocatorheader{ width:96%;}
+    #locationContainer{ width: 50%; height:auto; float:left; margin:0 2% 0 0;}
+    #submitContainer input[type=button]{ background:#de0000; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:18px 20px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; }
+
+    #storelocatorcontentleft{ width:55%; }
+    #storelocatorcontentright{ width:38%;}
+
+}
+
+@media only screen and (min-width : 480px) and (max-width : 719px) {
+
+    #storelocatorcontainer{ width:98%; height:auto; background:#fff; margin:0 auto; font-size:13px; font-family:Arial, Helvetica, sans-serif; }
+
+    #storelocatorheader{ width:96%;}
+
+    #locationContainer{ width:98%; height:auto; float:none; margin:0 2% 0 0; }
+    #storesContainer{ width:30%; height:auto; float:none; }
+
+    #submitContainer{ width:100%; height:auto; float:none; display:block; margin:20px 0 0 0;}
+    #submitContainer input[type=button]{ background:#de0000; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:18px 20px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; width:100%; }
+
+    #storelocatorcontentleft{ width:100%; float:none;}
+    #storelocatorcontentright{ width:90%; float:none; margin:20px auto 0 auto;}
+
+}
+
+@media only screen and (min-width : 200px) and (max-width : 479px) {
+    
+    #submitContainer input[type=submit]{ margin: 0 0 35px 0; }
+    .resete{  }
+
+    #storelocatorcontainer{ width:98%; height:auto; background:#fff; margin:0 auto; font-size:13px; font-family:Arial, Helvetica, sans-serif; }
+
+    #storelocatorheader{ width:96%;}
+
+    #locationContainer{ width:98%; height:auto; float:none; margin:0 2% 0 0; }
+    #storesContainer{ width:100%; height:auto; float:none; }
+
+    #submitContainer{ width:100%; height:auto; float:none; display:block; margin:20px 0 20px 0;}
+    #submitContainer input[type=button]{ background:#de0000; font-family: 'ronnia_ebextrabold'; border:none; outline:none; color:#fff; font-size:22px; text-align:center; padding:18px 20px; border-radius:5px;  -webkit-border-radius:5px; -moz-border-radius:5px; position:relative; behavior:url(css/PIE.htc); overflow:hidden; cursor:pointer; width:100%; }
+
+    #storelocatorcontentleft{ width:90%; float:none; margin:0 auto;}
+    #storelocatorcontentright{ width:80%; float:none; margin:20px auto 0 auto;}
+
+    #openWord{ padding:5px 3px 3px 3px;}
+    #closeWord{ padding:5px 3px 3px 3px;  }
+
+}               
+
+
+.singleStorecontainer{
+    cursor: pointer;
+}
+
+.singleRoute{
+    cursor: pointer;
+}
+
+.searchnearby{display:none;}
