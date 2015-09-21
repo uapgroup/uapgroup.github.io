@@ -247,7 +247,8 @@ jQuery(document).ready(function () {
         shops = [
 
 		{ title: "UAP Insurance Tanzania Ltd", description: "Barclays House, 4 th Floor Ohio Street	P.O. Box 71009 Dar Es Salaam, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.811151", lng: "39.287287", index: 4, openingtime: "", closingtime: "Tel: +255 22 213 7324 / 5" },
-		{ title: "UAP Insurance ARUSHA", description: "​NSSF Mafao House, 4th Floor, Old Moshi Road	P.O. Box 13123, Arusha​​, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-3.373962", lng: "36.696755", index: 4, openingtime: "", closingtime: "Tel:  +255 27 2520133" }
+		{ title: "UAP Insurance Ltd ARUSHA", description: "​NSSF Mafao House, 4th Floor, Old Moshi Road	P.O. Box 13123, Arusha, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-3.373962", lng: "36.696755", index: 4, openingtime: "", closingtime: "Tel:  +255 27 2520133" },
+		{ title: "UAP Insurance Ltd DODOMA ", description: "Plot No 47 Block 6, Nyerere Road Opp Nyerere Square	P.O. Box 753, Dodoma, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.178562", lng: "35.747382", index: 4, openingtime: "", closingtime: "Tel: +255 26 232 0999" }
         ];
     }
 
