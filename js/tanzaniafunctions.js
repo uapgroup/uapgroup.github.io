@@ -249,8 +249,8 @@ jQuery(document).ready(function () {
 		{ title: "UAP Insurance Tanzania Ltd", description: "Barclays House, 4 th Floor Ohio Street	P.O. Box 71009 Dar Es Salaam, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.811151", lng: "39.287287", index: 4, openingtime: "", closingtime: "Tel: +255 22 213 7324 / 5" },
 		{ title: "UAP Insurance Ltd ARUSHA", description: "​NSSF Mafao House, 4th Floor, Old Moshi Road	P.O. Box 13123, Arusha, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-3.373962", lng: "36.696755", index: 4, openingtime: "", closingtime: "Tel:  +255 27 2520133" },
 		{ title: "UAP Insurance Ltd DODOMA ", description: "Plot No 47 Block 6, Nyerere Road Opp Nyerere Square	P.O. Box 753, Dodoma, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.178562", lng: "35.747382", index: 4, openingtime: "", closingtime: "Tel: +255 26 232 0999" },
-		{ title: "UAP Insurance Ltd PAMBA", description: "Pamba Road	P.O. Box  644, Mwanza, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-2.523978", lng: "32.902428", index: 4, openingtime: "", closingtime: "Tel: +255 28 254 2423" },
-		{ title: "UAP Insurance Ltd MTWARA", description: "Mahakama Road P.O. Box 983, Mtwara, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-3.347228", lng: "37.335951", index: 4, openingtime: "", closingtime: "Tel: +255 23 233 4750" },
+		{ title: "UAP Insurance Ltd Mwanza", description: "Pamba Road	P.O. Box  644, Mwanza, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-2.523978", lng: "32.902428", index: 4, openingtime: "", closingtime: "Tel: +255 28 254 2423" },
+		{ title: "UAP Insurance Ltd MTWARA", description: "Mahakama Road P.O. Box 983, Mtwara, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-10.281145", lng: "40.184535", index: 4, openingtime: "", closingtime: "Tel: +255 23 233 4750" },
 		{ title: "UAP Insurance Ltd MBEYA", description: "Uhindini Street / Lupa Way, opposite Gapco Petro Station / General Post Office P.O. Box 6155 Mbeya, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-8.890602", lng: "33.443867", index: 4, openingtime: "", closingtime: "Tel: +255 25 250 4144" }
         ];
     }
