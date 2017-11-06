@@ -252,7 +252,10 @@ jQuery(document).ready(function () {
 		{ title: "UAP Insurance Ltd Mwanza", description: "Pamba Road	P.O. Box  644, Mwanza, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-2.523978", lng: "32.902428", index: 4, openingtime: "", closingtime: "Tel: +255 28 254 2423" },
 		{ title: "UAP Insurance Ltd MTWARA", description: "Mahakama Road P.O. Box 983, Mtwara, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-10.281145", lng: "40.184535", index: 4, openingtime: "", closingtime: "Tel: +255 23 233 4750" },
 		{ title: "UAP Insurance Ltd MBEYA", description: "Uhindini Street / Lupa Way, opposite Gapco Petro Station / General Post Office P.O. Box 6155 Mbeya, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-8.890602", lng: "33.443867", index: 4, openingtime: "", closingtime: "Tel: +255 25 250 4144" }
-        ];
+                { title: "UAP Insurance Ltd KAHAMA", description: "Osaka Road, Opposite Rivermark Hotel, Kahama, uapinsurancetanzania@uap-group.com", lat: "-3.829737", lng: "32.604128", index: 4, openingtime: "", closingtime: "Tel: " 
+		{ title: "UAP Insurance Ltd MOROGORO", description: "Federal Trading Centre, 2nd Floor,Lumumba Road,  P.O.Box 658 Morogoro, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.82645", lng: "37.664388", index: 4, openingtime: "", closingtime: "Tel: +255 23 2613695" }
+		{ title: "UAP Insurance Ltd ZANZIBA", description: "Kilimani  Plaza , Opposite Kilimani Bar, P.O.Box 877, Zanziba, Tanzania	uapinsurancetanzania@uap-group.com", lat: "-6.178650", lng: "39.203749", index: 4, openingtime: "", closingtime: "Tel: " }
+	];
     }
 
     function searchShops() {
